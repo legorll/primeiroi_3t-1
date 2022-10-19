@@ -36,6 +36,14 @@ function total(){
     let val = document.getElementById("valor").value;
     let ju = document.getElementById("juros").value;
 
+    let t = document.getElementById("meses").value;
+    let resultado = 0
+    for(let m = 1; m < t; m++){
+        resultado = (val * ((ju/100)+1));
+        val = resultado;
+        document.write("Mês " + m + " valor de " + val + "<br>")
+    }
+
     if(Number(val)){
         alert("O valor deve ser um número");
         document.getElementById("valor").value = "";
@@ -74,3 +82,4 @@ function necessário(){
     let r = 240 - Number(n1) + Number(n2) + Number(n3) + Number(n4);
     document.getElementById("resultado").innerHTML = r;
 }
+
